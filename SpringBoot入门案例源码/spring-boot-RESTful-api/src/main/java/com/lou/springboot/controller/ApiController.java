@@ -25,11 +25,11 @@ public class ApiController {
     UserDao userDao;
 
     // 查询一条记录
-    @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)//id待定，任意字符串，传入下面的id中
     @ResponseBody
     public Result<User> getOne(@PathVariable("id") Integer id) {
         if (id == null || id < 1) {
-            return ResultGenerator.genFailResult("缺少参数");
+            return ResultGenerator.genFailResult("缺少参数");//通过ResultGenerator返回的是result类
         }
         User user = userDao.getUserById(id);
         if (user == null) {

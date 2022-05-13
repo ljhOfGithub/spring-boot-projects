@@ -12,7 +12,7 @@ public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
     private int resultCode;
     private String message;
-    private T data;
+    private T data;//模板类data
 
     public Result() {
     }
