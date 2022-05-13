@@ -28,7 +28,7 @@ public class AdminServiceImpl implements AdminService {
         Admin adminUser = adminMapper.selectByPrimaryKey(loginUserId);
         //当前用户非空才可以进行更改
         if (adminUser != null) {
-            String originalPasswordMd5 = MD5Util.MD5Encode(originalPassword, "UTF-8");
+            String originalPasswordMd5 = MD5Util.MD5Encode(originalPassword, "UTF-8");//用MD5加密utf8格式的密码
             String newPasswordMd5 = MD5Util.MD5Encode(newPassword, "UTF-8");
             //比较原密码是否正确
             if (originalPasswordMd5.equals(adminUser.getLoginPassword())) {
