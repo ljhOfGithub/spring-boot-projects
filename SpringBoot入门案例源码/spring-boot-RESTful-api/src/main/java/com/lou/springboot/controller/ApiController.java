@@ -18,7 +18,7 @@ import java.util.List;
  * @link http://13blog.site
  */
 @Controller
-@RequestMapping("/api")
+@RequestMapping("/api")//spring形式的增删改查
 public class ApiController {
 
     @Resource
