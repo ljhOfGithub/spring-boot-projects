@@ -17,7 +17,7 @@ public class Result<T> implements Serializable {
     public Result() {
     }
 
-    public Result(int resultCode, String message) {
+    public Result(int resultCode, String message) {//代码，信息
         this.resultCode = resultCode;
         this.message = message;
     }
